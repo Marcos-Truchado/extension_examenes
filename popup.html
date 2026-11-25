@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: #0f0f1a;
+      color: #e0e0f0;
+      width: 260px;
+      padding: 18px 20px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #7c6ff7, #5a4fd4);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    h2 { font-size: 14px; font-weight: 600; color: #fff; }
+    p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; margin-bottom: 12px; }
+    .status {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .status.ok { background: rgba(109, 224, 160, 0.1); color: #6de0a0; }
+    .status.warn { background: rgba(240, 112, 112, 0.1); color: #f09090; }
+    a {
+      display: block;
+      text-align: center;
+      padding: 8px;
+      background: rgba(124,111,247,0.15);
+      color: #a09bf5;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    a:hover { background: rgba(124,111,247,0.25); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <h2>AI Selector</h2>
+  </div>
+  <p>Selecciona texto en cualquier página y haz clic en el botón flotante para resolver con IA.</p>
+  <div class="status" id="status">Comprobando configuración...</div>
+  <a href="options.html" target="_blank">⚙ Configurar API Key</a>
+  <script src="popup.js"></script>
+</body>
+</html>
